@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"  rel="stylesheet"/>
+    <link  href="./css/style.css"  rel="stylesheet"/>
+    <title>company-vacancy</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <section class="section-page-2">
+        <div class="container-fluid fixed-top" style="border-bottom: 1px solid #F2F2F2; background-color: #fff; ">
+          <div class="row">
+            <div class="col-12 pe-0 ps-0 ">
+              <nav class="navbar navbar-expand-lg bg-transparent p-0 ">
+                  <div class="container-fluid pt-4 pb-4" style="padding-left:64px; padding-right: 64px; ">
+                    <a class="navbar-brand p-0" href="home-page.html" >David Kenchadze</a>
+                    <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" fdprocessedid="zounrk">
+                      <span> <img src="./images/burger-icon.png"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end" tabindex="-1"  id="offcanvasNavbar"  aria-labelledby="offcanvasNavbarLabel" >
+                      <div class="offcanvas-header" style="padding-left:30px; padding-right:30px;">
+                        <h5 class="offcanvas-title " id="offcanvasNavbarLabel"> david kenchadze </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                      </div>
+                      <div class="offcanvas-body ">
+                        <ul class="navbar-nav justify-content-end align-items-start align-items-lg-center flex-grow-1 " style="gap:32px;">
+                          <li class="nav-item d-none d-lg-block">
+                            <div class="dropdown">
+                              <a class="nav-link" aria-current="page" href="#" data-bs-toggle="dropdown" aria-expanded="false" fdprocessedid="s0prh">კომპანიისთვის</a>
+                              <ul class="dropdown-menu drop-menu-1" >
+                                <li><a href="#" style="text-decoration: none;"><button class="dropdown-item" type="button" style="margin-bottom:16px;">ვაკანსიების განთავსება</button></a></li>
+                                <li><a href="#" style="text-decoration: none;"><button class="dropdown-item" type="button" style="margin-bottom:16px;">მოლაპარაკებების ომი</button></a></li>
+                                <li><a href="#" style="text-decoration: none;"><button class="dropdown-item" type="button" style="margin-bottom:16px;">კანდიდატების სტატისტიკა</button></a></li>
+                                <li><a href="prices.html" style="text-decoration: none;"><button class="dropdown-item" type="button">ფასები</button></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li class="nav-item d-none d-lg-block position-relative ">
+                            <div class="dropdown ">
+                              <a class="nav-link" aria-current="page" href="#" data-bs-toggle="dropdown" aria-expanded="false" fdprocessedid="s0prh">ჩემთვის</a>
+                              <ul class="dropdown-menu drop-menu-2" >
+                                <li><a href="#" style="text-decoration: none;"><button class="dropdown-item" type="button" style="margin-bottom:16px;">ტრენინგები</button></a></li>
+                                <li><a href="#" style="text-decoration: none;"><button class="dropdown-item" type="button" style="margin-bottom:16px;">დავით კენჭაძის სტატიები</button></a></li>
+                                <li><a href="#" style="text-decoration: none;"><button class="dropdown-item" type="button" style="margin-bottom:16px;">დავით კენჭაძის ვიდეოები</button></a></li>
+                                <li><a href="#" style="text-decoration: none;"><button class="dropdown-item" type="button">ჟურნალი მოტივაცია</button></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li class="nav-item d-block d-lg-none">
+                              <aside class="sidebar">
+                                  <button  onclick="handleHeaderClicked('tools')" class=" justify-content-between" style="height: 20px !important;">
+                                      <span>კომპანიისთვის</span> 
+                                      <span class="left-arrow" > <img src="./images/left-arrow 7.png" alt="">  </span>
+                                  </button>
+                                  <div id="tools" class="subnav">
+                                      <div class="subnav-inner d-flex flex-column">
+                                          <button>
+                                              <span>ტრენინგები</span> 
+                                          </button>
+                                          <button>
+                                              <span>ვაკანსიის განთავსება</span> 
+                                          </button>
+                                          <button>
+                                              <span>მოლაპარაკებების ომი</span> 
+                                          </button>
+                                          <button>
+                                              <span>კანდიდატების სტატისტიკა</span> 
+                                          </button>
+                                          <!-- more subnav buttons -->
+                                      </div>
+                                  </div>
+                              </aside>
+                          </li>
+                          <li class="nav-item d-block d-lg-none">
+                              <aside class="sidebar">
+                                  <button onclick="handleHeaderClicked('settings')" class=" justify-content-between" style="height: 20px !important;"> 
+                                      <span>ჩემთვის</span> 
+                                      <span class="left-arrow" ><img src="./images/left-arrow 7.png" alt=""></span>
+                                  </button>
+                                  <div id="settings" class="subnav ">
+                                      <div class="subnav-inner d-flex flex-column ">
+                                          <button >
+                                              <span>დავით კენჭაძის სტატიები</span> 
+                                          </button>
+                                          <button>
+                                              <span>დავით კენჭაძის ვიდეოები</span> 
+                                          </button>
+                                          <button>
+                                              <span>ჟურნალი მოტივაცია</span> 
+                                          </button>
+                                          <!-- more subnav buttons -->
+                                      </div>
+                                  </div>
+                              </aside>
+                          </li>
+                          <li class="nav-item d-none d-lg-block">
+                            <a class="nav-link " href="#">ჩვენი შედეგები</a>
+                          </li>
+                          <li class="nav-item d-block d-lg-none">
+                            <a class="nav-link offcanvas-menu " href="#">ჩვენი შედეგები</a>
+                          </li>
+                          <li class="nav-item d-none d-lg-block">
+                            <a class="nav-link" href="#">პროფესიონალები</a>
+                          </li>
+                          <li class="nav-item d-block d-lg-none">
+                            <a class="nav-link offcanvas-menu" href="#">კონტატი</a>
+                          </li>
+                          <li class="nav-item d-none">
+                            <a href="#"><button class="btn btn-warning " type="button">შესვლა</button></a>
+                          </li>
+                          <li class="nav-item me-2 ms-2 d-flex align-items-center d-none d-lg-block">
+                            <a href="#">
+                              <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="18.0583" cy="3.94115" r="2.94115" fill="#FFDD04"/>
+                                <path d="M16.9304 10.5305C17.5419 16.2224 19.9472 17.9432 19.9472 17.9432H1C1 17.9432 4.15786 15.6844 4.15786 7.77727C4.15786 5.98023 4.82312 4.25627 6.00732 2.98553C7.19257 1.71479 8.79993 1 10.4736 1C10.8283 1 11.181 1.03177 11.5262 1.09531M12.2946 21.12C12.1098 21.4412 11.8442 21.7079 11.5246 21.8933C11.205 22.0787 10.8425 22.1763 10.4736 22.1763C10.1047 22.1763 9.7422 22.0787 9.42258 21.8933C9.10296 21.7079 8.83741 21.4412 8.65256 21.12M17.8419 7.35369C18.6795 7.35369 19.4827 7.01899 20.0749 6.42321C20.6671 5.82744 20.9998 5.0194 20.9998 4.17685C20.9998 3.33429 20.6671 2.52625 20.0749 1.93048C19.4827 1.3347 18.6795 1 17.8419 1C17.0044 1 16.2012 1.3347 15.609 1.93048C15.0168 2.52625 14.6841 3.33429 14.6841 4.17685C14.6841 5.0194 15.0168 5.82744 15.609 6.42321C16.2012 7.01899 17.0044 7.35369 17.8419 7.35369Z" stroke="#424242" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </a>                            
+                          </li>
+                          <li class="nav-item  d-none d-lg-block position-relative">
+                            <a class="nav-link menu-profile-image p-0" aria-current="page" href="#" data-bs-toggle="dropdown" aria-expanded="false" fdprocessedid="s0prh"></a>
+                            <ul class="dropdown-menu drop-menu-3" >
+                              <li>
+                              <div class="drop-head d-flex align-items-center nav-link p-0"  aria-current="page" href="#" data-bs-toggle="dropdown" aria-expanded="false" fdprocessedid="s0prh">
+                                <a class="nav-link menu-profile-image-2 p-0" aria-current="page" href="#" data-bs-toggle="dropdown" aria-expanded="false" fdprocessedid="s0prh"></a>
+                                <div class="ms-3">
+                                  <h6>სახელი გვარი</h6>
+                                  <a href="#" style="text-decoration: none;"><p>Motivation.1@gmail.com</p></a>
+                                </div>
+                              </div>
+                              </li>
+                              <li>
+                              <div class="drop-body nav-link p-0"  aria-current="page" href="#" data-bs-toggle="dropdown" aria-expanded="false" fdprocessedid="s0prh">
+                                <a href="#" style="text-decoration: none;">
+                                  <div class="d-flex align-items-center" style="margin-bottom:20px;">
+                                    <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M9.00065 10.0003C11.3018 10.0003 13.1673 8.13485 13.1673 5.83366C13.1673 3.53247 11.3018 1.66699 9.00065 1.66699C6.69946 1.66699 4.83398 3.53247 4.83398 5.83366C4.83398 8.13485 6.69946 10.0003 9.00065 10.0003Z" stroke="#424242" stroke-width="1.66667"/>
+                                      <path d="M13.167 11.667H13.4604C14.0696 11.6672 14.6578 11.8898 15.1145 12.2931C15.5711 12.6963 15.8648 13.2525 15.9404 13.857L16.2662 16.4603C16.2955 16.6949 16.2746 16.9329 16.2049 17.1588C16.1351 17.3846 16.0182 17.593 15.8617 17.7702C15.7053 17.9473 15.513 18.0892 15.2975 18.1863C15.082 18.2835 14.8484 18.3337 14.612 18.3337H3.38871C3.15236 18.3337 2.9187 18.2835 2.70325 18.1863C2.48779 18.0892 2.29546 17.9473 2.13902 17.7702C1.98258 17.593 1.86562 17.3846 1.79588 17.1588C1.72614 16.9329 1.70524 16.6949 1.73454 16.4603L2.05954 13.857C2.13512 13.2522 2.42906 12.6958 2.88607 12.2925C3.34308 11.8892 3.93169 11.6668 4.54121 11.667H4.83371" stroke="#424242" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <p>ჩემი გვერდი</p>  
+                                  </div>
+                                </a>
+                                
+                                <a href="#" style="text-decoration: none;">
+                                  <div class="d-flex align-items-center">
+                                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.16667 14.6667C7.16667 14.4457 7.07887 14.2337 6.92259 14.0774C6.76631 13.9211 6.55435 13.8333 6.33333 13.8333H2.16667V2.16667H6.33333C6.55435 2.16667 6.76631 2.07887 6.92259 1.92259C7.07887 1.76631 7.16667 1.55435 7.16667 1.33333C7.16667 1.11232 7.07887 0.900358 6.92259 0.744078C6.76631 0.587797 6.55435 0.5 6.33333 0.5H2.16667C1.72464 0.5 1.30072 0.675595 0.988155 0.988155C0.675595 1.30072 0.5 1.72464 0.5 2.16667V13.8333C0.5 14.2754 0.675595 14.6993 0.988155 15.0118C1.30072 15.3244 1.72464 15.5 2.16667 15.5H6.33333C6.55435 15.5 6.76631 15.4122 6.92259 15.2559C7.07887 15.0996 7.16667 14.8877 7.16667 14.6667Z" fill="#424242"/>
+                                      <path d="M16.0953 8.58348C16.2478 8.42854 16.3333 8.22 16.3337 8.00265V7.99765C16.3332 7.77746 16.2454 7.56646 16.0895 7.41098L12.7562 4.07765C12.6793 3.99806 12.5873 3.93457 12.4857 3.8909C12.384 3.84722 12.2746 3.82424 12.164 3.82327C12.0533 3.82231 11.9436 3.8434 11.8412 3.8853C11.7388 3.9272 11.6457 3.98908 11.5675 4.06732C11.4893 4.14556 11.4274 4.23861 11.3855 4.34102C11.3436 4.44343 11.3225 4.55317 11.3234 4.66382C11.3244 4.77447 11.3474 4.88382 11.3911 4.98549C11.4347 5.08716 11.4982 5.17911 11.5778 5.25598L13.4887 7.16682H5.50033C5.27931 7.16682 5.06735 7.25461 4.91107 7.41089C4.75479 7.56717 4.66699 7.77913 4.66699 8.00015C4.66699 8.22116 4.75479 8.43312 4.91107 8.5894C5.06735 8.74568 5.27931 8.83348 5.50033 8.83348H13.4887L11.5778 10.7443C11.426 10.9015 11.342 11.112 11.3439 11.3305C11.3458 11.549 11.4335 11.758 11.588 11.9125C11.7425 12.067 11.9515 12.1546 12.17 12.1565C12.3885 12.1584 12.599 12.0744 12.7562 11.9226L16.0895 8.58932L16.0953 8.58348Z" fill="#424242"/>
+                                    </svg>
+                                    <p>გასვლა</p>  
+                                  </div>
+                                </a>
+                              </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="nav-link-reg text-center w-100  d-block d-lg-none" style="margin-top: 340px;">
+                              გაქვთ ანგარიში?
+                              <span > <a href="#" style="text-decoration: none;color: #31319D;">შესვლა</a> </span> 
+                          </li>
+                          <li class="nav-item d-block d-lg-none" style="margin-bottom: 244px; ">
+                              <a href="#"><button class="btn btn-warning w-100 pt-3 pb-3" type="button">რეგისტრაცია</button></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+          </div>
+          </div>
+        </div><!--end container-fluid navbar-->
+      </section><!--end section-page-2-->
+
+    <section class="page-3-section-2 d-none d-md-block " style="margin-top:145px;margin-bottom:106px ">
+        <div class="container-fluid ps-5 pe-5">
+            <div class="row">
+                <div class="col-12">
+                    <div class=" company-box d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center ">
+                            <div class="d-none d-lg-block">
+                                <div class="img-sircle d-flex align-items-center justify-content-center me-5 " style="height: 87px; width: 88px;">
+                                    <img src="./images/image-5-2.svg">
+                                </div>
+                            </div>
+                            <div class="d-block d-lg-none">
+                                <a href="#" class="company-logo-link-1" data-v-5127d4fb=""> 
+                                    <img class="company-logo-1" src="./images/image-5-1.svg" alt="vacancy logo" data-v-5127d4fb="">
+                                </a> 
+                            </div>
+                            <div class="">
+                                <p class="company-name mb-2" style="color: #424242;font-size: 18px;font-weight: 500;">WE DO</p>
+                                <p class="vacancy  mb-0">ვაკანსია (6)</p>
+                            </div>
+                        </div>
+                        <div class="globe-face-icons  d-flex align-items-start justify-content-start gap-3 ">
+                            <a href="#"><img src="./images/icon-facebook.png"></a>
+                            <a href="#"><img src="./images/icon-globe.png"></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row gy-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="box" >
+                        <div class="box-content-1 d-flex gap-3"style="margin-bottom: 30px;">
+                            <a href="#" class="company-logo-link-1" data-v-5127d4fb=""> 
+                                <img class="company-logo-1" src="./images/image-5-1.svg" alt="vacancy logo" data-v-5127d4fb="">
+                            </a> 
+                            <div>
+                                <a href="about-vacancy.html"><h6 >კორპორატიული გაყიდვების <br> მენეჯერი</h6></a>
+                                <a href="#"><p class="products">პროდუქტის/მომსახურების გაყიდვა</p></a>
+                                <a href="company-vacancy.html"><p class="company-name mb-0">WE DO</p></a>
+                            </div>
+                        </div>
+                        <a href="about-vacancy.html">
+                            <div class="box-content-2 d-flex">
+                                <div class="box-content-2-1" style="margin-right: 36px;">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="./images/icon-1-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">თბილისი</p>
+                                    </div>
+                                    <div class="d-flex align-items-center ">
+                                        <img src="./images/icon-2-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">სრული განაკვეთი</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="./images/icon-3-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">საშუალო დონე</p>
+                                    </div>
+                                    <div class="d-flex align-items-center ">
+                                        <img src="./images/icon-4-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">1500₾ - 3000₾</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div><!--end box-->
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="box" >
+                        <div class="box-content-1 d-flex gap-3"style="margin-bottom: 30px;">
+                            <a href="#" class="company-logo-link-1" data-v-5127d4fb=""> 
+                                <img class="company-logo-1" src="./images/image-5-1.svg" alt="vacancy logo" data-v-5127d4fb="">
+                            </a>  
+                            <div>
+                                <a href="about-vacancy.html"><h6 >კორპორატიული გაყიდვების <br> მენეჯერი</h6></a>
+                                <a href="#"><p class="products">პროდუქტის/მომსახურების გაყიდვა</p></a>
+                                <a href="company-vacancy.html"><p class="company-name mb-0">WE DO</p></a>
+                            </div>
+                        </div>
+                        <a href="about-vacancy.html">
+                            <div class="box-content-2 d-flex">
+                                <div class="box-content-2-1" style="margin-right: 36px;">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="./images/icon-1-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">თბილისი</p>
+                                    </div>
+                                    <div class="d-flex align-items-center ">
+                                        <img src="./images/icon-2-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">სრული განაკვეთი</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="./images/icon-3-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">საშუალო დონე</p>
+                                    </div>
+                                    <div class="d-flex align-items-center ">
+                                        <img src="./images/icon-4-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">1500₾ - 3000₾</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div><!--end box-->
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="box" >
+                        <div class="box-content-1 d-flex gap-3"style="margin-bottom: 30px;">
+                            <a href="#" class="company-logo-link-1" data-v-5127d4fb=""> 
+                                <img class="company-logo-1" src="./images/image-5-1.svg" alt="vacancy logo" data-v-5127d4fb="">
+                            </a> 
+                            <div>
+                                <a href="about-vacancy.html"><h6 >კორპორატიული გაყიდვების <br> მენეჯერი</h6></a>
+                                <a href="#"><p class="products">პროდუქტის/მომსახურების გაყიდვა</p></a>
+                                <a href="company-vacancy.html"><p class="company-name mb-0">WE DO</p></a>
+                            </div>
+                        </div>
+                        <a href="about-vacancy.html">
+                            <div class="box-content-2 d-flex">
+                                <div class="box-content-2-1" style="margin-right: 36px;">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="./images/icon-1-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">თბილისი</p>
+                                    </div>
+                                    <div class="d-flex align-items-center ">
+                                        <img src="./images/icon-2-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">სრული განაკვეთი</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="./images/icon-3-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">საშუალო დონე</p>
+                                    </div>
+                                    <div class="d-flex align-items-center ">
+                                        <img src="./images/icon-4-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">1500₾ - 3000₾</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div><!--end box-->
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="box" >
+                        <div class="box-content-1 d-flex gap-3"style="margin-bottom: 30px;">
+                            <a href="#" class="company-logo-link-1" data-v-5127d4fb=""> 
+                                <img class="company-logo-1" src="./images/image-5-1.svg" alt="vacancy logo" data-v-5127d4fb="">
+                            </a> 
+                            <div>
+                                <a href="about-vacancy.html"><h6 >კორპორატიული გაყიდვების <br> მენეჯერი</h6></a>
+                                <a href="#"><p class="products">პროდუქტის/მომსახურების გაყიდვა</p></a>
+                                <a href="about-company.html"><p class="company-name mb-0">WE DO</p></a>
+                            </div>
+                        </div>
+                        <a href="about-vacancy.html">
+                            <div class="box-content-2 d-flex">
+                                <div class="box-content-2-1" style="margin-right: 36px;">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="./images/icon-1-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">თბილისი</p>
+                                    </div>
+                                    <div class="d-flex align-items-center ">
+                                        <img src="./images/icon-2-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">სრული განაკვეთი</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="./images/icon-3-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">საშუალო დონე</p>
+                                    </div>
+                                    <div class="d-flex align-items-center ">
+                                        <img src="./images/icon-4-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">1500₾ - 3000₾</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div><!--end box-->
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="box" >
+                        <div class="box-content-1 d-flex gap-3"style="margin-bottom: 30px;">
+                            <a href="#" class="company-logo-link-1" data-v-5127d4fb=""> 
+                                <img class="company-logo-1" src="./images/image-5-1.svg" alt="vacancy logo" data-v-5127d4fb="">
+                            </a> 
+                            <div>
+                                <a href="about-vacancy.html"><h6 >კორპორატიული გაყიდვების <br> მენეჯერი</h6></a>
+                                <a href="#"><p class="products">პროდუქტის/მომსახურების გაყიდვა</p></a>
+                                <a href="company-vacancy.html"><p class="company-name mb-0">WE DO</p></a>
+                            </div>
+                        </div>
+                        <a href="about-vacancy.html">
+                            <div class="box-content-2 d-flex">
+                                <div class="box-content-2-1" style="margin-right: 36px;">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="./images/icon-1-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">თბილისი</p>
+                                    </div>
+                                    <div class="d-flex align-items-center ">
+                                        <img src="./images/icon-2-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">სრული განაკვეთი</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="./images/icon-3-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">საშუალო დონე</p>
+                                    </div>
+                                    <div class="d-flex align-items-center ">
+                                        <img src="./images/icon-4-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">1500₾ - 3000₾</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div><!--end box-->
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="box" >
+                        <div class="box-content-1 d-flex gap-3"style="margin-bottom: 30px;">
+                            <a href="#" class="company-logo-link-1" data-v-5127d4fb=""> 
+                                <img class="company-logo-1" src="./images/image-5-1.svg" alt="vacancy logo" data-v-5127d4fb="">
+                            </a> 
+                            <div>
+                                <a href="about-vacancy.html"><h6 >კორპორატიული გაყიდვების <br> მენეჯერი</h6></a>
+                                <a href="#"><p class="products">პროდუქტის/მომსახურების გაყიდვა</p></a>
+                                <a href="company-vacancy.html"><p class="company-name mb-0">WE DO</p></a>
+                            </div>
+                        </div>
+                        <a href="about-vacancy.html">
+                            <div class="box-content-2 d-flex">
+                                <div class="box-content-2-1" style="margin-right: 36px;">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="./images/icon-1-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">თბილისი</p>
+                                    </div>
+                                    <div class="d-flex align-items-center ">
+                                        <img src="./images/icon-2-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">სრული განაკვეთი</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="./images/icon-3-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">საშუალო დონე</p>
+                                    </div>
+                                    <div class="d-flex align-items-center ">
+                                        <img src="./images/icon-4-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">1500₾ - 3000₾</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div><!--end box-->
+                </div>
+            </div><!--end row-->
+        </div><!--end container-fluid-->
+    </section><!--end section-2 -->
+    <section class="page-3-section-2 d-block d-md-none " style="margin-top:145px;margin-bottom:106px ">
+        <div class="container-fluid ps-3 pe-3 ">
+            <div class="row">
+                <div class="col-12">
+                    <div class=" company-box d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center ">
+                            <div class="d-none d-lg-block">
+                                <div class="img-sircle d-flex align-items-center justify-content-center me-4 " style="height: 87px; width: 88px;">
+                                    <img src="./images/image-5.svg">
+                                </div>
+                            </div>
+                            <div class="d-block d-lg-none me-3">
+                                <a href="#" class="company-logo-link-1" data-v-5127d4fb=""> 
+                                    <img class="company-logo-1" src="./images/image-5-1.svg" alt="vacancy logo" data-v-5127d4fb="">
+                                </a> 
+                          </div>
+                            <div class="">
+                                <p class="company-name mb-2" style="color: #424242;font-size: 18px;font-weight: 500;">WE DO</p>
+                                <p class="vacancy  mb-0">ვაკანსია (3)</p>
+                            </div>
+                        </div>
+                        <div class="globe-face-icons  d-flex align-items-start justify-content-start gap-3 ">
+                            <img src="./images/icon-facebook.png">
+                            <img src="./images/icon-globe.png">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row gy-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="box" >
+                        <div class="box-content-1 d-flex gap-3"style="margin-bottom: 30px;">
+                            <a href="#" class="company-logo-link-1" data-v-5127d4fb=""> 
+                                <img class="company-logo-1" src="./images/image-5-1.svg" alt="vacancy logo" data-v-5127d4fb="">
+                            </a> 
+                            <div>
+                                <a href="about-vacancy.html"><h6 >კორპორატიული გაყიდვების <br> მენეჯერი</h6></a>
+                                <a href="#"><p class="products">პროდუქტის/მომსახურების გაყიდვა</p></a>
+                                <a href="company-vacancy.html"><p class="company-name mb-0">WE DO</p></a>
+                            </div>
+                        </div>
+                        <a href="about-vacancy.html">
+                            <div class="box-content-2 d-flex">
+                                <div class="box-content-2-1" style="margin-right: 36px;">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="./images/icon-1-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">თბილისი</p>
+                                    </div>
+                                    <div class="d-flex align-items-center ">
+                                        <img src="./images/icon-2-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">სრული განაკვეთი</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="./images/icon-3-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">საშუალო დონე</p>
+                                    </div>
+                                    <div class="d-flex align-items-center ">
+                                        <img src="./images/icon-4-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">1500₾ - 3000₾</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div><!--end box-->
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="box" >
+                        <div class="box-content-1 d-flex gap-3"style="margin-bottom: 30px;">
+                            <a href="#" class="company-logo-link-1" data-v-5127d4fb=""> 
+                                <img class="company-logo-1" src="./images/image-5-1.svg" alt="vacancy logo" data-v-5127d4fb="">
+                            </a> 
+                            <div>
+                                <a href="about-vacancy.html"><h6 >კორპორატიული გაყიდვების <br> მენეჯერი</h6></a>
+                                <a href="#"><p class="products">პროდუქტის/მომსახურების გაყიდვა</p></a>
+                                <a href="company-vacancy.html"><p class="company-name mb-0">WE DO</p></a>
+                            </div>
+                        </div>
+                        <a href="about-vacancy.html">
+                            <div class="box-content-2 d-flex">
+                                <div class="box-content-2-1" style="margin-right: 36px;">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="./images/icon-1-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">თბილისი</p>
+                                    </div>
+                                    <div class="d-flex align-items-center ">
+                                        <img src="./images/icon-2-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">სრული განაკვეთი</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="./images/icon-3-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">საშუალო დონე</p>
+                                    </div>
+                                    <div class="d-flex align-items-center ">
+                                        <img src="./images/icon-4-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">1500₾ - 3000₾</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div><!--end box-->
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="box" >
+                        <div class="box-content-1 d-flex gap-3"style="margin-bottom: 30px;">
+                            <a href="#" class="company-logo-link-1" data-v-5127d4fb=""> 
+                                <img class="company-logo-1" src="./images/image-5-1.svg" alt="vacancy logo" data-v-5127d4fb="">
+                            </a> 
+                            <div>
+                                <a href="about-vacancy.html"><h6 >კორპორატიული გაყიდვების <br> მენეჯერი</h6></a>
+                                <a href="#"><p class="products">პროდუქტის/მომსახურების გაყიდვა</p></a>
+                                <a href="company-vacancy.html"><p class="company-name mb-0">WE DO</p></a>
+                            </div>
+                        </div>
+                        <a href="about-vacancy.html">
+                            <div class="box-content-2 d-flex">
+                                <div class="box-content-2-1" style="margin-right: 36px;">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="./images/icon-1-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">თბილისი</p>
+                                    </div>
+                                    <div class="d-flex align-items-center ">
+                                        <img src="./images/icon-2-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">სრული განაკვეთი</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="./images/icon-3-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">საშუალო დონე</p>
+                                    </div>
+                                    <div class="d-flex align-items-center ">
+                                        <img src="./images/icon-4-1.svg" alt="icon">
+                                        <p class="location mb-0 ms-2">1500₾ - 3000₾</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div><!--end box-->
+                </div>
+            </div><!--end row-->
+        </div><!--end container-fluid-->
+    </section><!--end section-2 -->
+
+    <section class="section-3-page-2">
+        <div class="footer">
+            <div class="row">
+              <div class="col-12 col-lg-6 ps-lg-3 mb-4 mb-lg-0 d-none d-lg-block">
+                <div style="margin-bottom: 41px;">
+                  <div style="margin-bottom: 8px;">
+                    <h6> კონტაქტი</h6>
+                  </div>
+                  <div style="margin-bottom: 10px;">
+                    <a href="#"class="contact-info">+995 598 99 81 54</a>
+                  </div>
+                  <div>
+                    <a href="#"class="contact-info">Motivation@gmail.com</a>
+                  </div> 
+                </div>
+                <div class="d-flex foot-icons align-items-center justify-content-start">
+                  <div class="icon-circle">
+                    <a href="#"><img src="./images/wiber-icon.svg"></a>
+                  </div>
+                  <div class="icon-circle">
+                    <a href="#"><img src="./images/facebook-icon.svg"></a>
+                  </div>
+                  <div class="icon-circle">
+                    <a href="#"><img src="./images/linkedin-icon.svg"></a>
+                  </div>
+                  <div class="icon-circle">
+                    <a href="#"><img src="./images/youtube-icon.svg"></a>
+                  </div>
+                  <div class="icon-circle">
+                    <a href="#"><img src="./images/tik-tok-icon.svg"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6 ">
+                <div class="text d-none d-lg-block" style="margin-bottom: 33px;">
+                  <h6>გამოიწერე</h6>
+                  <h3> მიიღე ყველა ვაკანსიის შეტყობინება და დაეხმარე შენს მეგობრებს დასაქმებაში.</h3>
+                </div>
+                <div class="text d-block d-lg-none" style="margin-bottom: 22px;">
+                  <h3>გამოიწერე, მიიღე ყველა ვაკანსიის შეტყობინება და დაეხმარე შენს მეგობრებს დასაქმებაში.</h3>
+                </div>
+                <div class="row justify-content-start ">
+                  <form action="#" class="col-12  email-box  ">
+                    <input class="w-100" type="email" placeholder="ელ. ფოსტა">
+                    <button type="submit" class="btn  btn-warning">გამოწერა</button>
+                  </form>
+                </div>
+              </div>
+  
+              <div class="col-12 col-lg-6   ps-lg-3  text-center d-flex flex-column justify-content-center align-items-center d-block  d-lg-none">
+                <div style="margin-bottom: 28px; margin-top:28px;">
+                  <div style="margin-bottom: 10px;">
+                    <h6> კონტაქტი</h6>
+                  </div>
+                  <div style="margin-bottom: 8px;">
+                    <a href="#"class="contact-info">+995 598 99 81 54</a>
+                  </div>
+                  <div>
+                    <a href="#"class="contact-info">Motivation@gmail.com</a>
+                  </div> 
+                </div>
+                <div class="d-flex foot-icons align-items-center justify-content-start">
+                  <div class="icon-circle">
+                    <a href="#"><img src="./images/wiber-icon.svg"></a>
+                  </div>
+                  <div class="icon-circle">
+                    <a href="#"><img src="./images/facebook-icon.svg"></a>
+                  </div>
+                  <div class="icon-circle">
+                    <a href="#"><img src="./images/linkedin-icon.svg"></a>
+                  </div>
+                  <div class="icon-circle">
+                    <a href="#"><img src="./images/youtube-icon.svg"></a>
+                  </div>
+                  <div class="icon-circle">
+                    <a href="#"><img src="./images/tik-tok-icon.svg"></a>
+                  </div>
+                </div>
+              </div>
+  
+            </div><!--end row -->
+        </div><!--end footer -->
+    </section><!--end section-3 -->
+
+
+    <script src="./js/main.js"></script>
+
+  </body>
+</html>
